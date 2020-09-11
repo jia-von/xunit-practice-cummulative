@@ -20,7 +20,6 @@ namespace XUnitCumulativePractice_Tests
 
             //(Assert) Assert that the list has a count of 1 and the first item is the item that was added.
             Assert.Single(newStorage.Contents);
-
         }
 
 

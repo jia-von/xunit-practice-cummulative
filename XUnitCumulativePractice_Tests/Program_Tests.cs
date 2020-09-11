@@ -9,8 +9,8 @@ namespace XUnitCumulativePractice_Tests
 
          [Theory,
                 InlineData("one"), //false
-                InlineData("-1"), //false
-                InlineData("1"), //false
+                InlineData("101"), //false
+                InlineData("3"), //false
                 ]
         public void Integer_Test1(string input)
         {
@@ -19,36 +19,37 @@ namespace XUnitCumulativePractice_Tests
         }
 
         [Theory,
-           InlineData("1"), //true
-           InlineData("-1"), //false
-           InlineData("2"), //true
+           InlineData("2", true), //true
+           InlineData("-2", false), //false
+           InlineData("4", true), //true
         ]
-        public void Integer_Test2(string input)
+        public void Integer_Test2(string input, bool expectedResult)
         {
-            //Act
-            Assert.False(Program.ValidateOneToOneHundredEven(input)); //False
+            //assertion
+            Assert.Equal(expectedResult, Program.ValidateOneToOneHundredEven(input));
+
         }
 
         [Theory,
-           InlineData("1"), //true
-           InlineData("-1"), //false
-           InlineData("3"), //false
+           InlineData("2", true), //true
+           InlineData("-1", false), //false
+           InlineData("3", false), //false
 ]
-        public void Integer_Test3(string input)
+        public void Integer_Test3(string input, bool expectedResult)
         {
             //Act
-            Assert.False(Program.ValidateOneToOneHundredEven(input)); //False
+            Assert.Equal(expectedResult, Program.ValidateOneToOneHundredEven(input)); //False
         }
 
         [Theory,
-           InlineData("1"), //true
-           InlineData("-1"), //true
-           InlineData("3"), //false
+           InlineData("2", true), //true
+           InlineData("4", true), //true
+           InlineData("9", false), //false
         ]
-        public void Integer_Test4(string input)
+        public void Integer_Test4(string input, bool expectedResult)
         {
             //Act
-            Assert.False(Program.ValidateOneToOneHundredEven(input)); //False
+            Assert.Equal(expectedResult, Program.ValidateOneToOneHundredEven(input)); //False
         }
 
         [Theory,
@@ -59,7 +60,7 @@ namespace XUnitCumulativePractice_Tests
         public void Integer_Test5(string input)
         {
             //Act
-            Assert.False(Program.ValidateOneToOneHundredEven(input)); //true
+            Assert.True(Program.ValidateOneToOneHundredEven(input)); //true
         }
     }
 }
