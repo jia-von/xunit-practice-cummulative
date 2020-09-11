@@ -1,0 +1,41 @@
+﻿Create a new solution with an XUnitCumulativePractice console application.----Completed----
+
+Add a new xUnit Test Project (.NET Core) to the solution called XUnitCumulativePractice_Tests. ---Completed ------
+
+Add an assembly reference from XUnitCumulativePractice_Test  to XUnitCumulativePractice. ----Completed------
+
+Rename the default file “UnitTest1.cs” in the XUnit project to “Program_Tests.cs”. ----Completed--------
+
+Create a method in XUnitCumulativePractice.Program.cs called ValidateOneToOneHundredEven() that will accept a string (“1” or “20” etc.)  as a parameter (ensure your “Program” class is public).
+		Validate that the string:
+					Is an integer (numeric, will safely parse to int).
+					Is between 1 and 100.
+					Is even.
+					If it is, return true. Otherwise return false.
+
+
+
+Create test cases in Program_Tests.cs that will test each of the requirements of ValidateOneToOneHundredEven().
+
+Create a class called “Item” with the following properties:
+		“Name” (string).
+		A default and greedy constructor.
+
+
+Create a class called “Storage” with the following properties and methods:
+		“Contents” (list of Items).
+		AddItem() will accept an item and add it to the “Contents” list.
+		RemoveItem() will remove the most recent addition to the “Contents” list.
+		A default constructor.
+
+Add a tests file to the XUnit project called Storage_Tests.cs.
+	Test the addition of items (Fact):
+		(Arrange) Create an Item and an empty Storage. 
+		(Act) Add the Item to the Storage using the AddItem() method.
+		(Assert) Assert that the list has a count of 1 and the first item is the item that was added.
+
+Test the removal of items (Fact):    
+	(Arrange) Create a Storage prepopulated with 5 Items. Create an object reference variable to the last item in the Contents list.
+	(Act) Run RemoveItem() on the Storage. 
+	(Assert) Assert that the count of the Contents has dropped by 1 (is 4) and that the object reference is no longer in the list.
+
