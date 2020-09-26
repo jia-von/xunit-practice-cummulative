@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 using XUnitCumulativePractice;
 
@@ -23,7 +24,10 @@ namespace XUnitCumulativePractice_Tests
             Assert.Single(newStorage.Contents);
 
             //(Assert) Assert that the item in Storage.Contents is “TestItem”.
-            Assert.Equal(newStorage.Contents[0], TestItem);
+            Assert.Equal(TestItem, newStorage.Contents[0]);
+            
+            //Osase method
+            Assert.Equal("TestItem", newStorage.Contents[0].Name);
 
         }
         /*
