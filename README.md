@@ -24,7 +24,7 @@ $ start devenv XUnitCumulativePractice.sln
  - A new XUnit Test project (.NET Core) was created with solution name `XUnitCumulativePractice_Tests.sln`.
 
  - A program written named `ValidateOneToOneHundredEven()` method.
-   - This method that will accept a string (�1� or �20� etc.)  as a parameter.
+   - This method that will accept a string ("1" or "20" etc.)  as a parameter.
 	- Test casses was created to test tis method and to validate string as integers. 
 
 - Two classes was created, `Item.cs` and `Storage.cs`.
